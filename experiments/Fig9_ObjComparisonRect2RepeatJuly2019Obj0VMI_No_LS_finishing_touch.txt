@@ -19,3 +19,4 @@ levels of VMC relaxation=0
 Best known solution as input=false
 performLocalSearchFinishingTouch=false
 useFCFSYardPolicy=false
+testTrainingSetSolutionOnTestSet=true
