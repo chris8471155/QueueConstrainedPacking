@@ -1040,8 +1040,8 @@ public class Yard{
 							//laneScore+=(Math.max(0, yardLanes[i].numberOfVehicleTypesInQueue+1-1))/vTypes;
 							//maximise the concentration of the vehicle type in the queue that it is added to
 							//
-							//plus a minimum value so that new lanes are not started unnecessarily
-							laneScore=0.1*(Double.MIN_VALUE+1-(((yardLanes[i].vCounts[currentRectangle.type]+1)*rectangleDistribution[0][currentRectangle.type])/(yardLanes[i].lengthOfQueue+rectangleDistribution[0][currentRectangle.type])));
+							//plus a maximum value so that new lanes are not started unnecessarily
+							laneScore=0.1*(Double.MAX_VALUE+1-(((yardLanes[i].vCounts[currentRectangle.type]+1)*rectangleDistribution[0][currentRectangle.type])/(yardLanes[i].lengthOfQueue+rectangleDistribution[0][currentRectangle.type])));
 						}else{
 							laneScore=0.1*(1-(((yardLanes[i].vCounts[currentRectangle.type]+1)*rectangleDistribution[0][currentRectangle.type])/(yardLanes[i].lengthOfQueue+rectangleDistribution[0][currentRectangle.type])));
 						}
